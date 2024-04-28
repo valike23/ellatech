@@ -1,20 +1,5 @@
 <svelte:head>
-    <link rel="stylesheet" href="/assets/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="/assets/css/iconfont.min.css" />
-    <link rel="stylesheet" href="/assets/css/plugins.css" />
-    <link rel="stylesheet" href="/assets/css/helper.css" />
-    <link rel="stylesheet" href="/assets/css/style.css" />
-    <!-- Modernizr JS -->
-    <script src="/assets/js/vendor/modernizr-2.8.3.min.js"></script>
-    <script defer src="assets/js/vendor/jquery-v3.0.0.min.js"></script>
-    <script
-        defer
-        src="https://maps.google.com/maps/api/js?sensor=false&amp;libraries=geometry&amp;v=3.22&amp;key=AIzaSyDAq7MrCR1A2qIShmjbtLHSKjcEIEBEEwM"
-    ></script>
-    <script defer src="assets/js/popper.min.js"></script>
-    <script defer src="assets/js/bootstrap.min.js"></script>
-    <script defer src="assets/js/plugins.js"></script>
-    <script defer src="assets/js/main.js"></script>
+  
 </svelte:head>
 
 <div id="main-wrapper">
