@@ -1,519 +1,389 @@
 <svelte:head>
-  
+    <meta
+        name="description"
+        content="Ellatech Energy Services Ltd provides electrical, instrumentation, procurement, construction, commissioning, calibration, pressure testing, and industrial support services."
+    />
+    <meta name="theme-color" content="#0f4c81" />
 </svelte:head>
 
-<div id="main-wrapper">
-    <header class="header header-transparent header-sticky">
-        <div class="header-top">
-            <div class="container">
-                <div class="row justify-content-between m-0 g-0">
-                    <!--Links start-->
-                    <div class="col-auto header-top-links">
-                        <ul>
-                            <li>
-                                <i class="fa fa-clock-o"></i>7.30 AM - 9.30 PM
-                            </li>
-                            <li>
-                                <a href="#"
-                                    ><i class="fa fa-phone"></i>(001) 25465 258
-                                    369</a
-                                >
-                            </li>
-                        </ul>
-                    </div>
-                    <!--Links end-->
+<script lang="ts">
+    const navItems = [
+        { label: "Home", href: "#home" },
+        { label: "About", href: "#about" },
+        { label: "Services", href: "#services" },
+        { label: "Values", href: "#values" },
+        { label: "Contact", href: "#contact" }
+    ];
 
-                    <!--Socail start-->
-                    <div class="col-auto header-top-social">
-                        <a href="#"><i class="fa fa-facebook"></i></a>
-                        <a href="#"><i class="fa fa-twitter"></i></a>
-                        <a href="#"><i class="fa fa-linkedin"></i></a>
-                        <a href="#"><i class="fa fa-pinterest-p"></i></a>
-                        <a href="#"><i class="fa fa-google-plus"></i></a>
-                    </div>
-                    <!--Socail end-->
-                </div>
-            </div>
+    const services = [
+        "Electrical / Instrument Works",
+        "Instrument Calibration",
+        "Electrical / Instrument Inspection",
+        "Metering and Proving Systems",
+        "Fire and Gas",
+        "HVAC",
+        "Pressure Testing",
+        "Procurement",
+        "Training, Consultancy and Manpower Supply"
+    ];
+</script>
+
+<div class="site-shell">
+    <div class="page-glow page-glow-left"></div>
+    <div class="page-glow page-glow-right"></div>
+
+    <header class="site-header">
+        <div class="container shell-row topbar">
+            <p>Electrical and instrumentation support for oil, gas and industrial operations</p>
+            <a href="tel:+2340804302488">+234 0804302488</a>
         </div>
-        <div class="header-bottom menu-right">
-            <div class="container">
-                <div class="row justify-content-between m-0 g-0">
-                    <!--Logo start-->
-                    <div class="col-auto mt-20 mb-20">
-                        <div class="logo">
-                            <a href="/"
-                                ><img
-                                style="width:180px;"
-                                    src="/bg.png"
-                                    alt=""
-                                /></a
-                            >
-                        </div>
-                    </div>
-                    <!--Logo end-->
 
-                    <!--Menu start-->
-                    <div class="col-auto d-flex">
-                        <nav class="main-menu">
-                            <ul>
-                                <li>
-                                    <a href="/">Home</a>
-                                   
-                                </li>
-                                <li><a href="/">About</a></li>
-                                <li>
-                                    <a href="/">Service</a>
-                                    <ul class="sub-menu">
-                                        <li>
-                                            <a href="/"
-                                                >Service Style One</a
-                                            >
-                                        </li>
-                                        <li>
-                                            <a href="/"
-                                                >Service Style Two</a
-                                            >
-                                        </li>
-                                        <li>
-                                            <a href="/"
-                                                >Service Details Left Sidebar</a
-                                            >
-                                        </li>
-                                        <li>
-                                            <a
-                                                href="/"
-                                                >Service Details Right Sidebar</a
-                                            >
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <a href="/">Project</a>
-                                    <ul class="sub-menu">
-                                        <li>
-                                            <a href="/"
-                                                >Project Boxed</a
-                                            >
-                                            <ul class="sub-menu">
-                                                <li>
-                                                    <a href="/"
-                                                        >Project With Gutter</a
-                                                    >
-                                                    <ul class="sub-menu">
-                                                        <li>
-                                                            <a
-                                                                href="/"
-                                                                >Project 2
-                                                                Column</a
-                                                            >
-                                                        </li>
-                                                        <li>
-                                                            <a
-                                                                href="/"
-                                                                >Project 3
-                                                                Column</a
-                                                            >
-                                                        </li>
-                                                        <li>
-                                                            <a
-                                                                href="/"
-                                                                >Project 4
-                                                                Column</a
-                                                            >
-                                                        </li>
-                                                    </ul>
-                                                </li>
-                                                <li>
-                                                    <a href="/"
-                                                        >Project Gutter Less</a
-                                                    >
-                                                    <ul class="sub-menu">
-                                                        <li>
-                                                            <a
-                                                                href="/"
-                                                                >Project 2
-                                                                Column</a
-                                                            >
-                                                        </li>
-                                                        <li>
-                                                            <a
-                                                                href="/"
-                                                                >Project 3
-                                                                Column</a
-                                                            >
-                                                        </li>
-                                                        <li>
-                                                            <a
-                                                                href="/"
-                                                                >Project 4
-                                                                Column</a
-                                                            >
-                                                        </li>
-                                                    </ul>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                        <li>
-                                            <a href="/"
-                                                >Project Full Width</a
-                                            >
-                                            <ul class="sub-menu">
-                                                <li>
-                                                    <a
-                                                        href="/"
-                                                        >Project With Gutter</a
-                                                    >
-                                                    <ul class="sub-menu">
-                                                        <li>
-                                                            <a
-                                                                href="/"
-                                                                >Project 3
-                                                                Column</a
-                                                            >
-                                                        </li>
-                                                        <li>
-                                                            <a
-                                                                href="/"
-                                                                >Project 4
-                                                                Column</a
-                                                            >
-                                                        </li>
-                                                        <li>
-                                                            <a
-                                                                href="/"
-                                                                >Project 5
-                                                                Column</a
-                                                            >
-                                                        </li>
-                                                    </ul>
-                                                </li>
-                                                <li>
-                                                    <a href="/"
-                                                        >Project Gutter Less</a
-                                                    >
-                                                    <ul class="sub-menu">
-                                                        <li>
-                                                            <a
-                                                                href="/"
-                                                                >Project 3
-                                                                Column</a
-                                                            >
-                                                        </li>
-                                                        <li>
-                                                            <a
-                                                                href="/"
-                                                                >Project 4
-                                                                Column</a
-                                                            >
-                                                        </li>
-                                                        <li>
-                                                            <a
-                                                                href="/"
-                                                                >Project 5
-                                                                Column</a
-                                                            >
-                                                        </li>
-                                                    </ul>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                        <li>
-                                            <a href="/"
-                                                >Project Details</a
-                                            >
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <a href="/">Shop</a>
-                                    <ul class="sub-menu">
-                                        <li>
-                                            <a href="/"
-                                                >Shop 4 Column (No Sidebar)</a
-                                            >
-                                        </li>
-                                        <li>
-                                            <a href="/"
-                                                >Shop 3 Column Left Sidebar</a
-                                            >
-                                        </li>
-                                        <li>
-                                            <a href="/"
-                                                >Shop 3 Column Right Sidebar</a
-                                            >
-                                        </li>
-                                        <li>
-                                            <a href="/"
-                                                >Product Details Left Sidebar</a
-                                            >
-                                        </li>
-                                        <li>
-                                            <a
-                                                href="/"
-                                                >Product Details Right Sidebar</a
-                                            >
-                                        </li>
-                                        <li>
-                                            <a href="/">Shopping Cart</a
-                                            >
-                                        </li>
-                                        <li>
-                                            <a href="/">Checkout</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <a href="/">Blog</a>
-                                    <ul class="sub-menu">
-                                        <li>
-                                            <a href="/"
-                                                >Blog 3 Column (No Sidebar)</a
-                                            >
-                                        </li>
-                                        <li>
-                                            <a href="/"
-                                                >Blog 2 Column Left Sidebar</a
-                                            >
-                                        </li>
-                                        <li>
-                                            <a href="/"
-                                                >Blog 2 Column Right Sidebar</a
-                                            >
-                                        </li>
-                                        <li>
-                                            <a href="/"
-                                                >Blog Details Left Sidebar</a
-                                            >
-                                        </li>
-                                        <li>
-                                            <a
-                                                href="/"
-                                                >Blog Details Right Sidebar</a
-                                            >
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li><a href="/">Contact</a></li>
-                            </ul>
-                        </nav>
-                        <div class="header-search">
-                            <button class="header-search-toggle"
-                                ><i class="pe-7s-search"></i></button
-                            >
-                            <div class="header-search-form">
-                                <form action="#">
-                                    <input
-                                        type="text"
-                                        placeholder="Type and hit enter"
-                                    />
-                                    <button><i class="pe-7s-search"></i></button
-                                    >
-                                </form>
-                            </div>
-                        </div>
-                        <div class="header-cart">
-                            <a href="/"
-                                ><i class="pe-7s-cart"></i><span>3</span></a
-                            >
-                        </div>
-                    </div>
-                    <!--Menu end-->
-                </div>
+        <div class="container shell-row navbar">
+            <a class="brand" href="#home" aria-label="Ellatech Energy Services Ltd home">
+                <img src="/assets/images/logo.png" alt="Ellatech Energy Services Ltd" />
+            </a>
 
-                <!--Mobile Menu start-->
-                <div class="row">
-                    <div class="col-12 d-flex d-lg-none">
-                        <div class="mobile-menu"></div>
-                    </div>
-                </div>
-                <!--Mobile Menu end-->
-            </div>
+            <nav class="site-nav" aria-label="Primary">
+                {#each navItems as item}
+                    <a href={item.href}>{item.label}</a>
+                {/each}
+            </nav>
+
+            <a class="header-cta" href="#contact">Request Support</a>
         </div>
     </header>
-    <slot />
 
-    <footer
-        class="footer-section section"
-        style="background-image: url(assets/images/bg/footer-bg.jpg)"
-    >
-        <!--Footer Top start-->
-        <div
-            class="footer-top section pt-100 pt-lg-80 pt-md-70 pt-sm-60 pt-xs-50 pb-60 pb-lg-40 pb-md-30 pb-sm-20 pb-xs-10"
-        >
-            <div class="container">
-                <div class="row row-25">
-                    <!--Footer Widget start-->
-                    <div class="footer-widget col-lg-3 col-md-6 col-12 mb-40">
-                        <h4 class="title">
-                            <span class="text">About us</span>
-                        </h4>
-                        <p>
-                            Koncrete - Construction Bootstrap 5 Templatethe best
-                            theme for elit, sed do to eiumod tempor dolor sit
-                            amet, ctetur adipiscing elit seddo dolor sit amet.
-                        </p>
-                        <div class="footer-social">
-                            <a href="#" class="facebook"
-                                ><i class="fa fa-facebook"></i></a
-                            >
-                            <a href="#" class="twitter"
-                                ><i class="fa fa-twitter"></i></a
-                            >
-                            <a href="#" class="linkedin"
-                                ><i class="fa fa-linkedin"></i></a
-                            >
-                            <a href="#" class="google"
-                                ><i class="fa fa-google-plus"></i></a
-                            >
-                            <a href="#" class="pinterest"
-                                ><i class="fa fa-pinterest-p"></i></a
-                            >
-                        </div>
-                    </div>
-                    <!--Footer Widget end-->
+    <main>
+        <slot />
+    </main>
 
-                    <!--Footer Widget start-->
-                    <div class="footer-widget col-lg-3 col-md-6 col-12 mb-40">
-                        <h4 class="title">
-                            <span class="text">Contact us</span>
-                        </h4>
-                        <ul>
-                            <li>
-                                <i class="fa fa-map-o"></i><span
-                                    >256, 1st AVE, Manchester 125 , Noth England</span
-                                >
-                            </li>
-                            <li>
-                                <i class="fa fa-phone"></i><span
-                                    ><a href="#">+012 345 678 102</a><a href="#"
-                                        >+012 345 678 101</a
-                                    ></span
-                                >
-                            </li>
-                            <li>
-                                <i class="fa fa-envelope-o"></i><span
-                                    ><a href="#">info@example.com</a><a href="#"
-                                        >www.example.com</a
-                                    ></span
-                                >
-                            </li>
-                        </ul>
-                    </div>
-                    <!--Footer Widget end-->
+    <footer class="site-footer" id="contact">
+        <div class="container footer-grid">
+            <div>
+                <a class="footer-brand" href="#home">
+                    <img src="/assets/images/logo.png" alt="Ellatech Energy Services Ltd" />
+                </a>
+                <p class="footer-copy">
+                    Viable indigenous engineering support across procurement,
+                    construction, commissioning, calibration and maintenance.
+                </p>
+            </div>
 
-                    <!--Footer Widget start-->
-                    <div class="footer-widget col-lg-3 col-md-6 col-12 mb-40">
-                        <h4 class="title">
-                            <span class="text">Instagram Feed</span>
-                        </h4>
-                        <ul id="instafeed" class="footer-instafeed">
-                            <li>
-                                <a href="#"
-                                    ><img
-                                        src="/assets/images/project/project-1.jpg"
-                                        alt=""
-                                    /></a
-                                >
-                            </li>
-                            <li>
-                                <a href="#"
-                                    ><img
-                                        src="/assets/images/project/project-2.jpg"
-                                        alt=""
-                                    /></a
-                                >
-                            </li>
-                            <li>
-                                <a href="#"
-                                    ><img
-                                        src="/assets/images/project/project-3.jpg"
-                                        alt=""
-                                    /></a
-                                >
-                            </li>
-                            <li>
-                                <a href="#"
-                                    ><img
-                                        src="/assets/images/project/project-4.jpg"
-                                        alt=""
-                                    /></a
-                                >
-                            </li>
-                            <li>
-                                <a href="#"
-                                    ><img
-                                        src="/assets/images/project/project-5.jpg"
-                                        alt=""
-                                    /></a
-                                >
-                            </li>
-                            <li>
-                                <a href="#"
-                                    ><img
-                                        src="/assets/images/project/project-6.jpg"
-                                        alt=""
-                                    /></a
-                                >
-                            </li>
-                        </ul>
-                    </div>
-                    <!--Footer Widget end-->
+            <div>
+                <h2>Quick Links</h2>
+                <div class="footer-links">
+                    {#each navItems as item}
+                        <a href={item.href}>{item.label}</a>
+                    {/each}
+                </div>
+            </div>
 
-                    <!--Footer Widget start-->
-                    <div class="footer-widget col-lg-3 col-md-6 col-12 mb-40">
-                        <h4 class="title">
-                            <span class="text">Newsletter</span>
-                        </h4>
+            <div>
+                <h2>Core Services</h2>
+                <ul class="footer-services">
+                    {#each services as service}
+                        <li>{service}</li>
+                    {/each}
+                </ul>
+            </div>
 
-                        <p>
-                            Subscribe our newsletter and get all latest news
-                            about our latest properties, promotions, offers and
-                            discount
-                        </p>
-
-                        <form id="mc-form" class="mc-form footer-newsletter">
-                            <input
-                                id="mc-email"
-                                type="email"
-                                autocomplete="off"
-                                placeholder="Email Here.."
-                            />
-                            <button id="mc-submit"
-                                ><i class="fa fa-paper-plane-o"></i></button
-                            >
-                        </form>
-                        <!-- mailchimp-alerts Start -->
-                        <div class="mailchimp-alerts text-centre">
-                            <div class="mailchimp-submitting"></div>
-                            <!-- mailchimp-submitting end -->
-                            <div class="mailchimp-success"></div>
-                            <!-- mailchimp-success end -->
-                            <div class="mailchimp-error"></div>
-                            <!-- mailchimp-error end -->
-                        </div>
-                        <!-- mailchimp-alerts end -->
-                    </div>
-                    <!--Footer Widget end-->
+            <div>
+                <h2>Contact</h2>
+                <div class="contact-stack">
+                    <p>
+                        305 Port Harcourt/Aba Expressway, Opposite Trust Fund,
+                        after Rumuokwurushi junction, Port Harcourt, Rivers
+                        State, Nigeria.
+                    </p>
+                    <a href="tel:+2340804302488">+234 0804302488</a>
+                    <a href="mailto:info@ellatechg.com">info@ellatechg.com</a>
                 </div>
             </div>
         </div>
-        <!--Footer Top end-->
 
-        <!--Footer bottom start-->
-        <div class="footer-bottom section">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12">
-                        <div class="copyright text-center">
-                            <p>
-                                Copyright &copy;2024 <a href="#">EllaTech</a>.
-                                All rights reserved.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div class="container footer-bottom">
+            <p>Copyright © 2026 Ellatech Energy Services Ltd. All rights reserved.</p>
+            <a href="#home">Back to top</a>
         </div>
-        <!--Footer bottom end-->
     </footer>
 </div>
+
+<style>
+    :global(html) {
+        scroll-behavior: smooth;
+    }
+
+    :global(body) {
+        margin: 0;
+        color: #12304b;
+        font-family: "Manrope", "Segoe UI", sans-serif;
+        background:
+            radial-gradient(circle at top left, rgba(100, 195, 255, 0.28), transparent 28%),
+            linear-gradient(180deg, #f5fbff 0%, #eef6fb 54%, #f7fbfe 100%);
+    }
+
+    :global(*) {
+        box-sizing: border-box;
+    }
+
+    :global(img) {
+        display: block;
+        max-width: 100%;
+    }
+
+    :global(a) {
+        color: inherit;
+        text-decoration: none;
+    }
+
+    .site-shell {
+        position: relative;
+        overflow: clip;
+    }
+
+    .page-glow {
+        position: fixed;
+        z-index: -1;
+        width: 28rem;
+        height: 28rem;
+        border-radius: 999px;
+        filter: blur(70px);
+        opacity: 0.32;
+        pointer-events: none;
+    }
+
+    .page-glow-left {
+        top: -7rem;
+        left: -9rem;
+        background: #5bbcff;
+    }
+
+    .page-glow-right {
+        top: 18rem;
+        right: -10rem;
+        background: #0f4c81;
+    }
+
+    .container {
+        width: min(1180px, calc(100% - 2rem));
+        margin: 0 auto;
+    }
+
+    .shell-row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+    }
+
+    .site-header {
+        position: sticky;
+        top: 0;
+        z-index: 20;
+        backdrop-filter: blur(20px);
+        background: rgba(247, 251, 254, 0.72);
+        border-bottom: 1px solid rgba(15, 76, 129, 0.08);
+    }
+
+    .topbar {
+        padding: 0.8rem 0;
+        color: #48657f;
+        font-size: 0.85rem;
+    }
+
+    .topbar p {
+        margin: 0;
+    }
+
+    .topbar a {
+        font-weight: 700;
+        color: #0f4c81;
+    }
+
+    .navbar {
+        padding: 1rem 0 1.1rem;
+    }
+
+    .brand {
+        flex: 0 0 auto;
+    }
+
+    .brand img,
+    .footer-brand img {
+        width: min(280px, 62vw);
+        max-height: 4.75rem;
+        height: auto;
+        object-fit: contain;
+    }
+
+    .site-nav {
+        display: flex;
+        align-items: center;
+        gap: 0.4rem;
+        padding: 0.35rem;
+        border: 1px solid rgba(15, 76, 129, 0.08);
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.82);
+        box-shadow: 0 14px 34px rgba(15, 76, 129, 0.08);
+    }
+
+    .site-nav a,
+    .header-cta,
+    .footer-bottom a {
+        transition:
+            transform 0.2s ease,
+            background 0.2s ease,
+            color 0.2s ease,
+            border-color 0.2s ease;
+    }
+
+    .site-nav a {
+        padding: 0.7rem 1rem;
+        border-radius: 999px;
+        color: #34526d;
+        font-weight: 700;
+        font-size: 0.95rem;
+    }
+
+    .site-nav a:hover {
+        background: rgba(15, 76, 129, 0.08);
+        color: #0f4c81;
+        transform: translateY(-1px);
+    }
+
+    .header-cta {
+        padding: 0.9rem 1.25rem;
+        border-radius: 999px;
+        background: linear-gradient(135deg, #0f4c81, #2aa1db);
+        color: #fff;
+        font-weight: 800;
+        box-shadow: 0 14px 30px rgba(15, 76, 129, 0.18);
+    }
+
+    .header-cta:hover,
+    .footer-bottom a:hover {
+        transform: translateY(-2px);
+    }
+
+    .site-footer {
+        margin-top: 5rem;
+        padding: 4rem 0 1.5rem;
+        color: rgba(255, 255, 255, 0.88);
+        background:
+            radial-gradient(circle at top left, rgba(43, 161, 219, 0.2), transparent 22%),
+            linear-gradient(180deg, #123552 0%, #0a2439 100%);
+    }
+
+    .footer-grid {
+        display: grid;
+        grid-template-columns: 1.3fr 0.9fr 1fr 1.1fr;
+        gap: 2rem;
+    }
+
+    .site-footer h2 {
+        margin: 0 0 1rem;
+        font-family: "Space Grotesk", "Segoe UI", sans-serif;
+        font-size: 1.1rem;
+        color: #fff;
+    }
+
+    .footer-copy,
+    .contact-stack p,
+    .footer-services li,
+    .footer-links a {
+        color: rgba(255, 255, 255, 0.78);
+        line-height: 1.7;
+    }
+
+    .footer-links,
+    .contact-stack {
+        display: grid;
+        gap: 0.65rem;
+    }
+
+    .footer-links a:hover,
+    .contact-stack a:hover {
+        color: #7fd4ff;
+    }
+
+    .footer-services {
+        display: grid;
+        gap: 0.6rem;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+
+    .footer-bottom {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+        margin-top: 2.4rem;
+        padding-top: 1.25rem;
+        border-top: 1px solid rgba(255, 255, 255, 0.12);
+        font-size: 0.92rem;
+    }
+
+    .footer-bottom p {
+        margin: 0;
+    }
+
+    .footer-bottom a {
+        padding: 0.75rem 1rem;
+        border: 1px solid rgba(255, 255, 255, 0.16);
+        border-radius: 999px;
+    }
+
+    @media (max-width: 1040px) {
+        .navbar {
+            flex-wrap: wrap;
+        }
+
+        .site-nav {
+            order: 3;
+            width: 100%;
+            justify-content: center;
+            flex-wrap: wrap;
+            border-radius: 1.25rem;
+        }
+
+        .footer-grid {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+    }
+
+    @media (max-width: 720px) {
+        .container {
+            width: min(100% - 1.25rem, 1180px);
+        }
+
+        .topbar,
+        .footer-bottom {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .topbar {
+            padding: 0.7rem 0;
+        }
+
+        .navbar {
+            padding: 0.8rem 0 1rem;
+        }
+
+        .site-nav a {
+            width: 100%;
+            text-align: center;
+        }
+
+        .header-cta {
+            width: 100%;
+            text-align: center;
+        }
+
+        .footer-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>
