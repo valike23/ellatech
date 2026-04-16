@@ -1,40 +1,61 @@
 <script lang="ts">
+    const siteImages = [
+        "/images/img01.jpeg",
+        "/images/img02.jpeg",
+        "/images/img03.jpeg",
+        "/images/img04.jpeg",
+        "/images/img05.jpeg",
+        "/images/img06.jpeg",
+        "/images/img07.jpeg",
+        "/images/img08.jpeg",
+        "/images/img09.jpeg"
+    ];
+
     const serviceCards = [
         {
             title: "Electrical / Instrument Works",
-            copy: "Field installation, hook-up, revamp work and commissioning support for plant and facility operations."
+            copy: "Field installation, hook-up, revamp work and commissioning support for plant and facility operations.",
+            image: siteImages[0]
         },
         {
             title: "Instrument Calibration",
-            copy: "Calibration and verification support for critical instruments to keep operations stable, safe and compliant."
+            copy: "Calibration and verification support for critical instruments to keep operations stable, safe and compliant.",
+            image: siteImages[1]
         },
         {
             title: "Electrical / Instrument Inspection",
-            copy: "Inspection, troubleshooting and reliability support for installed electrical and instrumentation systems."
+            copy: "Inspection, troubleshooting and reliability support for installed electrical and instrumentation systems.",
+            image: siteImages[2]
         },
         {
             title: "Metering and Proving Systems",
-            copy: "Metering, proving and liquid handling support for industrial process and transfer environments."
+            copy: "Metering, proving and liquid handling support for industrial process and transfer environments.",
+            image: siteImages[3]
         },
         {
             title: "Fire and Gas",
-            copy: "Support for fire and gas systems that help protect people, assets and process continuity."
+            copy: "Support for fire and gas systems that help protect people, assets and process continuity.",
+            image: siteImages[4]
         },
         {
             title: "HVAC",
-            copy: "Mechanical and facility support that helps maintain workable, controlled operating conditions."
+            copy: "Mechanical and facility support that helps maintain workable, controlled operating conditions.",
+            image: siteImages[5]
         },
         {
             title: "Pressure Testing",
-            copy: "Pressure testing of vessels and related systems, including PRV calibration support."
+            copy: "Pressure testing of vessels and related systems, including PRV calibration support.",
+            image: siteImages[6]
         },
         {
             title: "Procurement",
-            copy: "Responsive sourcing and procurement assistance for project delivery, maintenance and shutdown needs."
+            copy: "Responsive sourcing and procurement assistance for project delivery, maintenance and shutdown needs.",
+            image: siteImages[7]
         },
         {
             title: "Training, Consultancy and Manpower Supply",
-            copy: "Experienced technical support, advisory input and labour supply tailored to client requirements."
+            copy: "Experienced technical support, advisory input and labour supply tailored to client requirements.",
+            image: siteImages[8]
         }
     ];
 
@@ -53,20 +74,22 @@
         "Cost-effective solutions tailored to client budgets"
     ];
 
-    const gallery = [
+    const aboutGallery = [
         {
-            image: "/assets/images/slider/oilring1.jpeg",
-            title: "Industrial Electrical Support"
+            image: siteImages[1],
+            title: "Field Operations"
         },
         {
-            image: "/assets/images/about/about-3.jpg",
-            title: "Calibration and Plant Access"
+            image: siteImages[4],
+            title: "Installation Support"
         },
         {
-            image: "/assets/images/slider/team.jpeg",
-            title: "Field Teams and Commissioning"
+            image: siteImages[7],
+            title: "Commissioning Team"
         }
     ];
+
+    const photoLibrary = siteImages;
 </script>
 
 <svelte:head>
@@ -100,7 +123,7 @@
         <div class="hero-visual">
             <div class="visual-card visual-main">
                 <img
-                    src="/assets/images/slider/oilring1.jpeg"
+                    src={siteImages[0]}
                     alt="Engineer working on an industrial control panel"
                 />
             </div>
@@ -165,11 +188,16 @@
         </div>
 
         <div class="about-stack">
-            <img
-                class="about-image"
-                src="/assets/images/about/about-3.jpg"
-                alt="Ellatech team member working in an industrial facility"
-            />
+            <div class="about-gallery">
+                {#each aboutGallery as item}
+                    <img
+                        class="about-image"
+                        src={item.image}
+                        alt={item.title}
+                        loading="lazy"
+                    />
+                {/each}
+            </div>
 
             <div class="about-panel">
                 <h3>Operational Base</h3>
@@ -202,6 +230,12 @@
         <div class="service-grid">
             {#each serviceCards as service}
                 <article class="service-card">
+                    <img
+                        class="service-image"
+                        src={service.image}
+                        alt={service.title}
+                        loading="lazy"
+                    />
                     <div class="service-icon"></div>
                     <h3>{service.title}</h3>
                     <p>{service.copy}</p>
@@ -248,17 +282,16 @@
             <span class="eyebrow">Field Gallery</span>
             <h2>A cleaner view of Ellatech’s working environment.</h2>
             <p>
-                The original site relied on dense copy and small images. This
-                updated layout gives the visual story more space while keeping
-                the industrial focus front and center.
+                The gallery now uses only the nine selected images in the
+                `static/images` folder so the visual story stays focused and
+                consistent across the homepage.
             </p>
         </div>
 
         <div class="gallery-grid">
-            {#each gallery as item}
+            {#each photoLibrary as image, index}
                 <figure class="gallery-card">
-                    <img src={item.image} alt={item.title} />
-                    <figcaption>{item.title}</figcaption>
+                    <img src={image} alt={`Ellatech photo ${index + 1}`} loading="lazy" />
                 </figure>
             {/each}
         </div>
@@ -339,8 +372,7 @@
     .section-intro p,
     .values-copy p,
     .service-card p,
-    .mission-quote p,
-    .gallery-card figcaption {
+    .mission-quote p {
         color: #4e6a82;
         line-height: 1.8;
     }
@@ -539,7 +571,14 @@
         gap: 1.2rem;
     }
 
+    .about-gallery {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 1rem;
+    }
+
     .about-image,
+    .service-image,
     .gallery-card img {
         width: 100%;
         border-radius: 1.6rem;
@@ -547,7 +586,7 @@
     }
 
     .about-image {
-        min-height: 28rem;
+        min-height: 16rem;
     }
 
     .about-panel {
@@ -582,6 +621,11 @@
         display: grid;
         gap: 1rem;
         padding: 1.4rem;
+    }
+
+    .service-image {
+        height: 13rem;
+        border-radius: 1.2rem;
     }
 
     .service-icon {
@@ -638,7 +682,7 @@
     }
 
     .gallery-grid {
-        grid-template-columns: 1.2fr 0.8fr 0.95fr;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
     }
 
     .gallery-card {
@@ -646,13 +690,7 @@
     }
 
     .gallery-card img {
-        height: 21rem;
-    }
-
-    .gallery-card figcaption {
-        padding: 1rem 1.15rem 1.2rem;
-        font-weight: 800;
-        color: #12304b;
+        height: 14rem;
     }
 
     .cta-strip {
@@ -679,17 +717,16 @@
         .values-grid,
         .cta-shell,
         .service-grid,
-        .gallery-grid,
         .band-grid {
             grid-template-columns: repeat(2, minmax(0, 1fr));
         }
 
-        .hero-visual {
-            min-height: 42rem;
+        .gallery-grid {
+            grid-template-columns: repeat(3, minmax(0, 1fr));
         }
 
-        .gallery-card:first-child {
-            grid-column: 1 / -1;
+        .hero-visual {
+            min-height: 42rem;
         }
     }
 
@@ -707,9 +744,13 @@
         .values-grid,
         .cta-shell,
         .service-grid,
-        .gallery-grid,
         .band-grid {
             grid-template-columns: 1fr;
+        }
+
+        .about-gallery,
+        .gallery-grid {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
         }
 
         .hero-copy h1 {
@@ -740,6 +781,7 @@
         }
 
         .about-image,
+        .service-image,
         .gallery-card img {
             min-height: auto;
             height: 18rem;
