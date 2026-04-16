@@ -299,7 +299,7 @@
     }
 
     .hero-grid {
-        grid-template-columns: 1.08fr 0.92fr;
+        grid-template-columns: minmax(0, 0.55fr) minmax(0, 1.45fr);
     }
 
     .eyebrow {
@@ -330,8 +330,8 @@
 
     .hero-copy h1 {
         margin-top: 1.15rem;
-        font-size: clamp(2.8rem, 5vw, 5.3rem);
-        max-width: 11ch;
+        font-size: clamp(1.5rem, 2.5vw, 2.65rem);
+        max-width: 9ch;
     }
 
     .lead,
@@ -422,7 +422,7 @@
 
     .hero-visual {
         position: relative;
-        min-height: 38rem;
+        min-height: 75vh;
     }
 
     .visual-card,
@@ -441,7 +441,7 @@
 
     .visual-main {
         position: absolute;
-        inset: 0 1.2rem 5.5rem 0;
+        inset: 0 0 5.5rem 0;
         overflow: hidden;
     }
 
@@ -449,13 +449,14 @@
         width: 100%;
         height: 100%;
         object-fit: cover;
+        object-position: center;
     }
 
     .visual-note {
         position: absolute;
         right: 0;
         bottom: 6.7rem;
-        width: min(19rem, 72%);
+        width: min(22rem, 46%);
         padding: 1.4rem;
     }
 
@@ -467,7 +468,7 @@
         position: absolute;
         left: 1.4rem;
         bottom: 0;
-        width: min(18rem, 70%);
+        width: min(19rem, 36%);
         padding: 1.25rem 1.35rem;
         background: linear-gradient(135deg, #123d65, #2aa1db);
         color: #fff;
@@ -684,7 +685,7 @@
         }
 
         .hero-visual {
-            min-height: 34rem;
+            min-height: 42rem;
         }
 
         .gallery-card:first-child {
@@ -713,11 +714,11 @@
 
         .hero-copy h1 {
             max-width: 100%;
-            font-size: clamp(2.4rem, 13vw, 4rem);
+            font-size: clamp(1.9rem, 9vw, 2.6rem);
         }
 
         .hero-visual {
-            min-height: 29rem;
+            min-height: 34rem;
         }
 
         .visual-main {

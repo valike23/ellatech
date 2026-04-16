@@ -35,12 +35,12 @@
     <header class="site-header">
         <div class="container shell-row topbar">
             <p>Electrical and instrumentation support for oil, gas and industrial operations</p>
-            <a href="tel:+2340804302488">+234 0804302488</a>
+            <a href="tel:+234084302488">+234 084302488</a>
         </div>
 
         <div class="container shell-row navbar">
             <a class="brand" href="#home" aria-label="Ellatech Energy Services Ltd home">
-                <img src="/assets/images/logo.png" alt="Ellatech Energy Services Ltd" />
+                <img src="/assets/images/logo.jpeg" alt="Ellatech Energy Services Ltd" />
             </a>
 
             <nav class="site-nav" aria-label="Primary">
@@ -49,7 +49,17 @@
                 {/each}
             </nav>
 
-            <a class="header-cta" href="#contact">Request Support</a>
+            <div class="header-actions">
+                <a
+                    class="header-webmail"
+                    href="https://host.mcreal56.net:2096/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Webmail
+                </a>
+                <a class="header-cta" href="#contact">Request Support</a>
+            </div>
         </div>
     </header>
 
@@ -61,7 +71,7 @@
         <div class="container footer-grid">
             <div>
                 <a class="footer-brand" href="#home">
-                    <img src="/assets/images/logo.png" alt="Ellatech Energy Services Ltd" />
+                    <img src="/assets/images/logo.jpeg" alt="Ellatech Energy Services Ltd" />
                 </a>
                 <p class="footer-copy">
                     Viable indigenous engineering support across procurement,
@@ -228,6 +238,7 @@
     }
 
     .site-nav a,
+    .header-webmail,
     .header-cta,
     .footer-bottom a {
         transition:
@@ -251,15 +262,33 @@
         transform: translateY(-1px);
     }
 
+    .header-actions {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+    }
+
+    .header-webmail,
     .header-cta {
         padding: 0.9rem 1.25rem;
         border-radius: 999px;
+        font-weight: 800;
+    }
+
+    .header-webmail {
+        border: 1px solid rgba(15, 76, 129, 0.14);
+        background: rgba(255, 255, 255, 0.9);
+        color: #0f4c81;
+        box-shadow: 0 14px 30px rgba(15, 76, 129, 0.08);
+    }
+
+    .header-cta {
         background: linear-gradient(135deg, #0f4c81, #2aa1db);
         color: #fff;
-        font-weight: 800;
         box-shadow: 0 14px 30px rgba(15, 76, 129, 0.18);
     }
 
+    .header-webmail:hover,
     .header-cta:hover,
     .footer-bottom a:hover {
         transform: translateY(-2px);
@@ -348,6 +377,11 @@
             border-radius: 1.25rem;
         }
 
+        .header-actions {
+            width: 100%;
+            justify-content: flex-end;
+        }
+
         .footer-grid {
             grid-template-columns: repeat(2, minmax(0, 1fr));
         }
@@ -377,6 +411,12 @@
             text-align: center;
         }
 
+        .header-actions {
+            width: 100%;
+            flex-direction: column;
+        }
+
+        .header-webmail,
         .header-cta {
             width: 100%;
             text-align: center;
